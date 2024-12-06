@@ -1,11 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return render_template('index.html')  # Render the HTML file
+def hello():
+    return "Hello, World! This is a static message from my Flask app."
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)  # Make it accessible externally
-
+    app.run()
